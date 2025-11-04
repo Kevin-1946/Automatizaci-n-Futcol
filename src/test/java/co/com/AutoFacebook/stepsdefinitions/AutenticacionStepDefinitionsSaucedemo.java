@@ -1,14 +1,8 @@
 package co.com.AutoFacebook.stepsdefinitions;
-
-import co.com.AutoFacebook.models.CredencialesInicioSesion;
 import co.com.AutoFacebook.models.CredencialesInicioSesionSaucedemo;
-import co.com.AutoFacebook.questions.ValidacionLogin;
 import co.com.AutoFacebook.questions.ValidacionLoginSaucedemo;
-import co.com.AutoFacebook.tasks.AbrirPagina;
 import co.com.AutoFacebook.tasks.AbrirSaucedemo;
-import co.com.AutoFacebook.tasks.Autenticarse;
 import co.com.AutoFacebook.tasks.AutenticarseSaucedemo;
-import cucumber.api.DataTable;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;

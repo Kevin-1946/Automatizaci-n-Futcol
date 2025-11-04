@@ -6,10 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/autenticacion_facebook.feature",
+        features = "src/test/resources/features/autenticacion_futcol.feature",
         glue = {"co.com.AutoFacebook.stepsdefinitions", "co.com.AutoFacebook.utils.hooks"},
         plugin =  {"pretty"},
         snippets = SnippetType.CAMELCASE)
 
-public class AutenticacionRunner {
+public class AutenticacionRunnerFutcol {
 }
