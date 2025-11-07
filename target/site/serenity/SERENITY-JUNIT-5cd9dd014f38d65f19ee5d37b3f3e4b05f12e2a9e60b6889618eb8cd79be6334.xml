@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="como usuario de FutCol quiero autenticarme en la pagina web para luego hacer acceder a todas las funcionalidades de mi rol" skipped="0" tests="1" time="24.51" timestamp="2025-11-04 06:48:04"><testcase name="Verificar la autenticacion exitosa en la pagina de FutCol"/></testsuite>
+=======
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="como usuario de FutCol quiero autenticarme en la pagina web para luego hacer acceder a todas las funcionalidades de mi rol" skipped="0" tests="1" time="7.91" timestamp="2025-11-07 09:46:24"><testcase name="Verificar la autenticacion exitosa en la pagina de FutCol"/></testsuite>
+>>>>>>> 2f818dea3fe8ba3309bbf7e0d2763db99ac43fe7
