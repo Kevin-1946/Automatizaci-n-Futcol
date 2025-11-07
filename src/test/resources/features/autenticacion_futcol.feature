@@ -3,8 +3,6 @@
 
 Característica: como usuario de FutCol quiero autenticarme en la pagina web para luego hacer acceder a todas las funcionalidades de mi rol
 
-  @autenticacion
-
   Escenario: Verificar la autenticacion exitosa en la pagina de FutCol
 
     Dado que el usuario se encuentra en la vista de inicio de sesion de FutCol
