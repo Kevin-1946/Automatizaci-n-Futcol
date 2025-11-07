@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">AutomatizacionFacebook</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="5991c665f1b4db30d40eeec38a5bbf9f33f5f7bf215bfb8feb675d60c2d498c2.html">Como Usuario De Futcol Quiero Inscribir Mi Equipo En Un Torneo Para Poder Participar</a></span>
+                > <span class="truncate-60"><a
+                    href="0738dcd444fc6ae1df817068bbb0f9c57527aa17570fe75d34be5c998fc8f8c8.html">Verificar la inscripcion exitosa de un equipo en FutCol </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 06-11-2025 14:23</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Como Usuario De Futcol Quiero Inscribir Mi Equipo En Un Torneo Para Poder Participar </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="562cd2ce1339ef463800706677d212fdfba5564d1f4490c0b6e1b9aeb7e76307.html">Suscripcion
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Verificar la inscripcion exitosa de un equipo en FutCol
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected validacion suscripcion futcolExpected: is (true) but: was (false)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.AutoFacebook.stepsdefinitions.SuscripcionStepDefinitionsFutcol.seDebeVerificarQueLaInscripcionHayaSidoExitosa(SuscripcionStepDefinitionsFutcol.java:30)<br />✽.se debe verificar que la inscripcion haya sido exitosa(src/test/resources/features/suscripcion_futcol.feature:13)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource11997894559716638307.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b5ac930146c195e30c55533f1680c120a056f7e619f185a4b18a3ae653b27b8c.png" title=" Dado que el usuario se encuentra en la vista de suscripcion de FutCol" width="1364"/>
+                <img src="b5ac930146c195e30c55533f1680c120a056f7e619f185a4b18a3ae653b27b8c.png" title=" Usuario abrir suscripcion futcol" width="1364"/>
+                <img src="b5ac930146c195e30c55533f1680c120a056f7e619f185a4b18a3ae653b27b8c.png" title=" usuario opens the Inicio suscripcion futcol" width="1364"/>
+                <img src="b5ac930146c195e30c55533f1680c120a056f7e619f185a4b18a3ae653b27b8c.png" title=" Usuario abrir suscripcion futcol (completed)" width="1364"/>
+                <img src="b5ac930146c195e30c55533f1680c120a056f7e619f185a4b18a3ae653b27b8c.png" title=" Dado que el usuario se encuentra en la vista de suscripcion de FutCol (completed)" width="1364"/>
+                <img src="e722f219d2edc06f1cd9f2f89264806465d29af32dc1025dfc5bb28b24f59b48.png" title=" Cuando ingrese todos los datos requeridos para la inscripcion del equipo
+| nombreEquipo | torneo | formaPago | nombreCapitan | correoCapitan | documentoCapitan | contrasenaCapitan | generoCapitan | edadCapitan | fechaNacimientoCapitan | nombreJugador1 | emailJugador1 | documentoJugador1 | generoJugador1 | edadJugador1 | fechaNacimientoJugador1 | nombreJugador2 | emailJugador2 | documentoJugador2 | generoJugador2 | edadJugador2 | fechaNacimientoJugador2 | nombreJugador3 | emailJugador3 | documentoJugador3 | generoJugador3 | edadJugador3 | fechaNacimientoJugador3 | nombreJugador4 | emailJugador4 | documentoJugador4 | generoJugador4 | edadJugador4 | fechaNacimientoJugador4 | nombreJugador5 | emailJugador5 | documentoJugador5 | generoJugador5 | edadJugador5 | fechaNacimientoJugador5 | nombreJugador6 | emailJugador6 | documentoJugador6 | generoJugador6 | edadJugador6 | fechaNacimientoJugador6 | nombreJugador7 | emailJugador7 | documentoJugador7 | generoJugador7 | edadJugador7 | fechaNacimientoJugador7 |
+| Los Tigres | Liga | Efectivo | Juan Rincon | juan_rincon@gmail.com | 1001234554 | contrasena123 | Masculino | 26 | 15-05-1999 | Pedro Lopez | pedro_lp@gmail.com | 10257679981 | M | 24 | 20-08-2001 | Carlos Ruiz | carlos.iz@gmail.com | 1033551099 | M | 25 | 20-03-2000 | Luis Torres | luis_torres@gmail.com | 1033459987 | M | 24 | 25-11-2000 | Miguel Diaz | miguel.diaz@gmail.com | 1000323415 | M | 23 | 14-07-2002 | Jorge Mendez | jorge_1946@gmail.com | 1092326601 | M | 25 | 05-09-2000 | Diego Castro | diego.MFC@gmail.com | 1002751219 | M | 22 | 20-12-2003 | Andres Vargas | andres_01@gmail.com | 2346576456 | M | 25 | 18-04-2000 |" width="1364"/>
+                <img src="e722f219d2edc06f1cd9f2f89264806465d29af32dc1025dfc5bb28b24f59b48.png" title=" Usuario suscribirse futcol" width="1364"/>
+                <img src="e722f219d2edc06f1cd9f2f89264806465d29af32dc1025dfc5bb28b24f59b48.png" title=" usuario clicks on Clic en el bot&oacute;n Suscribirse del men&uacute;" width="1364"/>
+                <img src="1c602d5a8d8a96dccb37a0ca27a79e2d3cdc00ba3cddf833316750695f936fd6.png" title=" usuario enters 'Los Tigres' into Ingrese el nombre del equipo" width="1364"/>
+                <img src="1c602d5a8d8a96dccb37a0ca27a79e2d3cdc00ba3cddf833316750695f936fd6.png" title=" usuario enters 'Los Tigres' into Ingrese el nombre del equipo" width="1364"/>
+                <img src="b49adb423b9a406b62958afce0d86a3cd1df06cea872ee975149ae2c7f414ec7.png" title=" usuario select Liga on Seleccione el torneo" width="1364"/>
+                <img src="8990aa3921e2b791445c4aa25a130fe2ca58d89c24fbe569a69f7b477350a098.png" title=" usuario select Efectivo on Seleccione la forma de pago" width="1364"/>
+                <img src="caac366d9ff94dfbb00240478ced8f86b49bf9b7bc32dfa6c5f13b6dd252142b.png" title=" usuario enters 'Juan Rincon' into Ingrese el nombre completo del capit&aacute;n" width="1364"/>
+                <img src="caac366d9ff94dfbb00240478ced8f86b49bf9b7bc32dfa6c5f13b6dd252142b.png" title=" usuario enters 'Juan Rincon' into Ingrese el nombre completo del capit&aacute;n" width="1364"/>
+                <img src="caac366d9ff94dfbb00240478ced8f86b49bf9b7bc32dfa6c5f13b6dd252142b.png" title=" usuario enters 'juan_rincon@gmail.com' into Ingrese el correo del capit&aacute;n" width="1364"/>
+                <img src="1257c9565a4de01591d1a36dff774b45682f2dd96216de03e922bcd6cfa8fe74.png" title=" usuario enters '1001234554' into Ingrese el documento del capit&aacute;n" width="1364"/>
+                <img src="a6aaf6c98c9d56985d01dd2dd640094ec31e4b4dad15295d5866fc89868986d6.png" title=" usuario enters 'contrasena123' into Ingrese la contrase&ntilde;a del capit&aacute;n" width="1364"/>
+                <img src="f009b27d84c7eee7ef4ced16dee8cad932d4da069ad4c197ddf6dead2f700f57.png" title=" usuario select Masculino on Seleccione el g&eacute;nero del capit&aacute;n" width="1364"/>
+                <img src="57842cab8b2331d6b43b1a9064a1f0506be3e8744bab96bb8c940b941d6655eb.png" title=" usuario enters '26' into Ingrese la edad del capit&aacute;n" width="1364"/>
+                <img src="c53ed2acea8804241f8d3943faffb4bd4189c53d4e6c7b00b6a5f6da2afd45e1.png" title=" usuario enters '15-05-1999' into Ingrese la fecha de nacimiento del capit&aacute;n" width="1364"/>
+                <img src="c9c66d03b5279e43fbcabbf14938e24edf1386db79cd8462a803b9a6c539baf0.png" title=" usuario enters 'Pedro Lopez' into Ingrese el nombre del jugador 1" width="1364"/>
+                <img src="c9c66d03b5279e43fbcabbf14938e24edf1386db79cd8462a803b9a6c539baf0.png" title=" usuario enters 'Pedro Lopez' into Ingrese el nombre del jugador 1" width="1364"/>
+                <img src="f5cf21f6a35d2cd4f530fe42896c6e58019fa51065024412da2cc64b14f2ef4c.png" title=" usuario enters 'pedro_lp@gmail.com' into Ingrese el email del jugador 1" width="1364"/>
+                <img src="9c749233d09843121fdfbf9084fed75b8d59ec151b6a5d72b276d46ca236c22b.png" title=" usuario enters '10257679981' into Ingrese el documento del jugador 1" width="1364"/>
+                <img src="df75d038e90764828f78209cf7353f884a6cac19d5389d804759bfdc24d48d13.png" title=" usuario select M on Seleccione el g&eacute;nero del jugador 1" width="1364"/>
+                <img src="2fd62e7751aac0c6500b1ff7676e5cc6622697dc521331e9c95488aaaaf08a43.png" title=" usuario enters '24' into Ingrese la edad del jugador 1" width="1364"/>
+                <img src="3ae6ad2fb48dfdd2a194cd9dff9118e805c42250a20178e38caa8e1fd2901197.png" title=" usuario enters '20-08-2001' into Ingrese la fecha de nacimiento del jugador 1" width="1364"/>
+                <img src="21ccac1d2b96888e8ecc004e47b34e17e8fdb95103c5833de7d5c090ddbd7475.png" title=" usuario enters 'Carlos Ruiz' into Ingrese el nombre del jugador 2" width="1364"/>
+                <img src="d5671818de6b077b03f7d05f49d3263aec20d62cbda7b50515ee056f87150f94.png" title=" usuario enters 'carlos.iz@gmail.com' into Ingrese el email del jugador 2" width="1364"/>
+                <img src="ebe3c8bc84de39b5bb2a87dcef8a1a3a165ae7aa56444dff4409ac0614625316.png" title=" usuario enters '1033551099' into Ingrese el documento del jugador 2" width="1364"/>
+                <img src="fcf23999444634f2231cd7fce831c3214028a4ca859d37472d04e0be168febc8.png" title=" usuario select M on Seleccione el g&eacute;nero del jugador 2" width="1364"/>
+                <img src="46aa647852f8b953cff167ddad7133f28b6baba58d429259d9b684154c4dad4e.png" title=" usuario enters '25' into Ingrese la edad del jugador 2" width="1364"/>
+                <img src="0e0a9b15b877add9d46d4c0654cacd2186d887319a4614f0b3fb736fcfdd2f48.png" title=" usuario enters '20-03-2000' into Ingrese la fecha de nacimiento del jugador 2" width="1364"/>
+                <img src="955eef36d98e07e6f0d9dd9630b298b6ee2de563f224effa5ccb318ebdae0b16.png" title=" usuario enters 'Luis Torres' into Ingrese el nombre del jugador 3" width="1364"/>
+                <img src="955eef36d98e07e6f0d9dd9630b298b6ee2de563f224effa5ccb318ebdae0b16.png" title=" usuario enters 'Luis Torres' into Ingrese el nombre del jugador 3" width="1364"/>
+                <img src="d067187aa4be27a97d41e6c71c4738efb57a43e969e2c74976b8fc46f14bfc18.png" title=" usuario enters 'luis_torres@gmail.com' into Ingrese el email del jugador 3" width="1364"/>
+                <img src="e13aefc106aea6c2a7b4f4b7963935915fcdb4b9b497fe6f8e05416ae70389f7.png" title=" usuario enters '1033459987' into Ingrese el documento del jugador 3" width="1364"/>
+                <img src="ae0d0d2866d64e69fc491a44fa5a567a30ea75a17f74f791475204df331baab9.png" title=" usuario select M on Seleccione el g&eacute;nero del jugador 3" width="1364"/>
+                <img src="c282b1aa82c95d474eb04d79e1595304e0db9723805cdb75ea1cc637af53b2d4.png" title=" usuario enters '24' into Ingrese la edad del jugador 3" width="1364"/>
+                <img src="f1a6b9d4a51cf9847964cd5bd9159804337c8f0206835518adbd190064aa1054.png" title=" usuario enters '25-11-2000' into Ingrese la fecha de nacimiento del jugador 3" width="1364"/>
+                <img src="e461adfe52fe81bca545c4435279f2a1b989cc74f86b0fa14dd73b9ef88f56e9.png" title=" usuario enters 'Miguel Diaz' into Ingrese el nombre del jugador 4" width="1364"/>
+                <img src="79fcb5247158741dc84a105be8ea7ff40fcff499733dd278232de155e3aadc5d.png" title=" usuario enters 'miguel.diaz@gmail.com' into Ingrese el email del jugador 4" width="1364"/>
+                <img src="e5e15ea2d19577c5815ca6927d22b4476c0103a5be4fd070adec2249959ec2d7.png" title=" usuario enters '1000323415' into Ingrese el documento del jugador 4" width="1364"/>
+                <img src="2c02b61ed4482401b40ca213671717150f00fee62bb4dede13d13cb7ee1e6321.png" title=" usuario select M on Seleccione el g&eacute;nero del jugador 4" width="1364"/>
+                <img src="1aa104c71cea430d24c195d197d224641b44ca727e888cf3d5d94f170bf115d7.png" title=" usuario enters '23' into Ingrese la edad del jugador 4" width="1364"/>
+                <img src="746a4888b6bd7896aefee88ea8bb96de45d2920108c79cd092a80a78ee104783.png" title=" usuario enters '14-07-2002' into Ingrese la fecha de nacimiento del jugador 4" width="1364"/>
+                <img src="5d577ff2f92d34eda9733e4c218c2ca70145b96627651ba77006390ffea2e27b.png" title=" usuario enters 'Jorge Mendez' into Ingrese el nombre del jugador 5" width="1364"/>
+                <img src="5d577ff2f92d34eda9733e4c218c2ca70145b96627651ba77006390ffea2e27b.png" title=" usuario enters 'Jorge Mendez' into Ingrese el nombre del jugador 5" width="1364"/>
+                <img src="edf31a9ecbc19d60c74ebab0a2f0998ddf6ec44266df858c092393dff77276b8.png" title=" usuario enters 'jorge_1946@gmail.com' into Ingrese el email del jugador 5" width="1364"/>
+                <img src="ef8c1bea62303a9207db81c80a6622a4f3f41b1249a4567fa2d6d6ee824f9b27.png" title=" usuario enters '1092326601' into Ingrese el documento del jugador 5" width="1364"/>
+                <img src="1e6d6ed0352d3691fab264e290e193da04ba55b5221b00e5d0a12afa95b091c0.png" title=" usuario select M on Seleccione el g&eacute;nero del jugador 5" width="1364"/>
+                <img src="5918ac0612b58166f6f5893d37f838c5bce832bb731ef696bbde8d58be3a6e04.png" title=" usuario enters '25' into Ingrese la edad del jugador 5" width="1364"/>
+                <img src="87e9e04a04d3ed3d9e4b9ed5ae2965de0a08c7d08d99d9861a18f1f6a6813df0.png" title=" usuario enters '05-09-2000' into Ingrese la fecha de nacimiento del jugador 5" width="1364"/>
+                <img src="ddbca49c6c9f01845fcf9038ee5c4d531e11e87e451fe93b0e3833c52dd1c372.png" title=" usuario enters 'Diego Castro' into Ingrese el nombre del jugador 6" width="1364"/>
+                <img src="72c32530b1be92e49e64bc31e141e4bf0f1ffc237629279b699fba078f27d79d.png" title=" usuario enters 'diego.MFC@gmail.com' into Ingrese el email del jugador 6" width="1364"/>
+                <img src="598ed8f05717a8deedfb9d01e1a5ab6a4247085f48fc9dab6a0a2762ac6e1c0e.png" title=" usuario enters '1002751219' into Ingrese el documento del jugador 6" width="1364"/>
+                <img src="4cd11ca6b5efb527c0ce7bac307cbf982063465e11112d17af05f6a3de7187ca.png" title=" usuario select M on Seleccione el g&eacute;nero del jugador 6" width="1364"/>
+                <img src="a7f3d1804f37bc6580944b90d175e2cd6c469326b8ecffde2e732d7aeebf8955.png" title=" usuario enters '22' into Ingrese la edad del jugador 6" width="1364"/>
+                <img src="08e80c74853585b218322a7bfac8a4cc4e09fadeb5e04e89d9a5f0636de8e4f5.png" title=" usuario enters '20-12-2003' into Ingrese la fecha de nacimiento del jugador 6" width="1364"/>
+                <img src="6d285c988c1ee5e1527189ea46ee9f5ae0789fb80cca8e2986836e558d19d482.png" title=" usuario clicks on Clic en el bot&oacute;n A&ntilde;adir jugador" width="1364"/>
+                <img src="ee44417dd9d2c02639801d2fcb7e9e29b59373fc38942ae4790aa8b008cd5c1c.png" title=" usuario enters 'Andres Vargas' into Ingrese el nombre del jugador 7" width="1364"/>
+                <img src="ee44417dd9d2c02639801d2fcb7e9e29b59373fc38942ae4790aa8b008cd5c1c.png" title=" usuario enters 'Andres Vargas' into Ingrese el nombre del jugador 7" width="1364"/>
+                <img src="04782c4d3e59c860aee8424ebdcdc2b3574758a06db5fb605e8eb535240f3778.png" title=" usuario enters 'andres_01@gmail.com' into Ingrese el email del jugador 7" width="1364"/>
+                <img src="05f1641efd273646dd2bbaad41926087e1d0a1a85340057dbffa7a573d5d1018.png" title=" usuario enters '2346576456' into Ingrese el documento del jugador 7" width="1364"/>
+                <img src="405cc0f46a0a0355d01e293033d8f201d9dcdd854cfea6fd1db217a537a9a27f.png" title=" usuario select M on Seleccione el g&eacute;nero del jugador 7" width="1364"/>
+                <img src="f379eea9a6bc6baa2b115ece6cde4895a00aafbee05d8ed7234277aa10c74f46.png" title=" usuario enters '25' into Ingrese la edad del jugador 7" width="1364"/>
+                <img src="432361246799262fd0cd803de5193a043d8d60c7c0533e920b24ca0929d46bb4.png" title=" usuario enters '18-04-2000' into Ingrese la fecha de nacimiento del jugador 7" width="1364"/>
+                <img src="e8c1c80b7290e3b829f7cb7eba5454c2a9c20bc3258b81994a1bc6fcaaf8feeb.png" title=" Usuario suscribirse futcol" width="1364"/>
+                <img src="e8c1c80b7290e3b829f7cb7eba5454c2a9c20bc3258b81994a1bc6fcaaf8feeb.png" title=" usuario clicks on Clic en el bot&oacute;n Enviar Inscripci&oacute;n" width="1364"/>
+                <img src="e8c1c80b7290e3b829f7cb7eba5454c2a9c20bc3258b81994a1bc6fcaaf8feeb.png" title=" Cuando ingrese todos los datos requeridos para la inscripcion del equipo
+| nombreEquipo | torneo | formaPago | nombreCapitan | correoCapitan | documentoCapitan | contrasenaCapitan | generoCapitan | edadCapitan | fechaNacimientoCapitan | nombreJugador1 | emailJugador1 | documentoJugador1 | generoJugador1 | edadJugador1 | fechaNacimientoJugador1 | nombreJugador2 | emailJugador2 | documentoJugador2 | generoJugador2 | edadJugador2 | fechaNacimientoJugador2 | nombreJugador3 | emailJugador3 | documentoJugador3 | generoJugador3 | edadJugador3 | fechaNacimientoJugador3 | nombreJugador4 | emailJugador4 | documentoJugador4 | generoJugador4 | edadJugador4 | fechaNacimientoJugador4 | nombreJugador5 | emailJugador5 | documentoJugador5 | generoJugador5 | edadJugador5 | fechaNacimientoJugador5 | nombreJugador6 | emailJugador6 | documentoJugador6 | generoJugador6 | edadJugador6 | fechaNacimientoJugador6 | nombreJugador7 | emailJugador7 | documentoJugador7 | generoJugador7 | edadJugador7 | fechaNacimientoJugador7 |
+| Los Tigres | Liga | Efectivo | Juan Rincon | juan_rincon@gmail.com | 1001234554 | contrasena123 | Masculino | 26 | 15-05-1999 | Pedro Lopez | pedro_lp@gmail.com | 10257679981 | M | 24 | 20-08-2001 | Carlos Ruiz | carlos.iz@gmail.com | 1033551099 | M | 25 | 20-03-2000 | Luis Torres | luis_torres@gmail.com | 1033459987 | M | 24 | 25-11-2000 | Miguel Diaz | miguel.diaz@gmail.com | 1000323415 | M | 23 | 14-07-2002 | Jorge Mendez | jorge_1946@gmail.com | 1092326601 | M | 25 | 05-09-2000 | Diego Castro | diego.MFC@gmail.com | 1002751219 | M | 22 | 20-12-2003 | Andres Vargas | andres_01@gmail.com | 2346576456 | M | 25 | 18-04-2000 | (completed)" width="1364"/>
+                <img src="94ddd4840012044f68ffb995d361efb3e7c884ae98ae58143a49fcb36a7de5ba.png" title=" Entonces se debe verificar que la inscripcion haya sido exitosa" width="1364"/>
+                <img src="94ddd4840012044f68ffb995d361efb3e7c884ae98ae58143a49fcb36a7de5ba.png" title=" Then validacion suscripcion futcol: <span class='failing-color'>FAILURE</span>" width="1364"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.1</span>
+</div>
+</body>
+</html>
