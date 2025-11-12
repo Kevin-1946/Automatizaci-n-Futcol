@@ -1,9 +1,11 @@
 package co.com.AutoFacebook.stepsdefinitions;
 
-import co.com.AutoFacebook.models.modelcreartorneo.DatosCreacionTorneoFutcol;
+import co.com.AutoFacebook.models.modelcreartorneo.CredencialesCrearTorneoFutcol;
 import co.com.AutoFacebook.models.modellogin.CredencialesInicioSesionFutcol;
-import co.com.AutoFacebook.tasks.taskcreartorneo.CrearTorneoFutcol;
-import co.com.AutoFacebook.tasks.taskcreartorneo.NavegarMenuTorneosFutcol;
+import co.com.AutoFacebook.questions.questionscreartorneo.ValidacionCrearTorneoFutcol;
+import co.com.AutoFacebook.questions.questionslogin.ValidacionLoginFutcol;
+import co.com.AutoFacebook.tasks.taskcreartorneo.AbrirCrearTorneoFutcol;
+import co.com.AutoFacebook.tasks.taskcreartorneo.AutenticarseCrearTorneoFutcol;
 import co.com.AutoFacebook.tasks.tasklogin.AbrirFutcol;
 import co.com.AutoFacebook.tasks.tasklogin.AutenticarseFutcol;
 import cucumber.api.java.es.Cuando;
@@ -15,68 +17,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static co.com.AutoFacebook.questions.questionscreartorneo.ValidacionCreacionTorneoFutcol.validacionCreacionTorneoFutcol;
+import static co.com.AutoFacebook.questions.questionscreartorneo.ValidacionCrearTorneoFutcol.validacionCrearTorneoFutcol;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.is;
 
 public class CreacionTorneoStepDefinitionsFutcol {
-
-    @Dado("que el administrador ingresa a la plataforma FUTCOL")
-    public void queElAdministradorIngresaALaPlataformaFUTCOL() {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                AbrirFutcol.laPaginaFutcol()
-        );
+    @Cuando("^rellena el formulario de torneo$")
+    public void rellenaElFormularioDeTorneo(List<CredencialesCrearTorneoFutcol> credencialesCrearTorneoFutcol) {
+        theActorInTheSpotlight().wasAbleTo(AutenticarseCrearTorneoFutcol.aute(credencialesCrearTorneoFutcol));
     }
 
-    @Cuando("inicia sesión con credenciales de administrador")
-    public void iniciaSesionConCredencialesDeAdministrador() {
-        List<CredencialesInicioSesionFutcol> credenciales = new ArrayList<>();
-        credenciales.add(new CredencialesInicioSesionFutcol("admin@torneo.com", "admin123"));
-
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                AutenticarseFutcol.aute(credenciales)
-        );
+    @Entonces("^creara un torneo visible en todos los modulos$")
+    public void crearaUnTorneoVisibleEnTodosLosModulos() {
+        theActorInTheSpotlight().should(seeThat(ValidacionCrearTorneoFutcol.validacionCrearTorneoFutcol()));
     }
 
-    @Cuando("navega al menú de creación de torneos")
-    public void navegaAlMenuDeCreacionDeTorneos() {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                NavegarMenuTorneosFutcol.navegarMenuTorneosFutcol()
-        );
-    }
-
-    @Cuando("completa el formulario con los siguientes datos:")
-    public void completaElFormularioConLosSiguientesDatos(DataTable dataTable) {
-        List<Map<String, String>> datos = dataTable.asMaps();
-
-        List<DatosCreacionTorneoFutcol> listaDatosTorneo = new ArrayList<>();
-
-        for (Map<String, String> fila : datos) {
-            DatosCreacionTorneoFutcol torneo = new DatosCreacionTorneoFutcol(
-                    fila.get("tipoTorneo"),
-                    fila.get("categoria"),
-                    fila.get("fechaInicio"),
-                    fila.get("fechaFin"),
-                    fila.get("modalidad"),
-                    fila.get("organizador"),
-                    fila.get("precio"),
-                    fila.get("sede")
-            );
-            listaDatosTorneo.add(torneo);
-        }
-
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                CrearTorneoFutcol.crearTorneoFutcol(listaDatosTorneo)
-        );
-    }
-
-    @Entonces("debería ver el mensaje de confirmación de creación exitosa")
-    public void deberiaVerElMensajeDeConfirmacionDeCreacionExitosa() {
-        OnStage.theActorInTheSpotlight().should(
-                seeThat("La validación de creación de torneo",
-                        validacionCreacionTorneoFutcol(),
-                        is(true)
-                )
-        );
-    }
 }

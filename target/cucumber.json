@@ -1,0 +1,89 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 8389615600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PreparacionEscenario.preparar(Scenario)"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Crear torneo exitosamente",
+        "description": "",
+        "id": "quiero-crear-un-torneo;crear-torneo-exitosamente",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7992922400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "rellena el formulario de torneo",
+            "match": {
+              "location": "CreacionTorneoStepDefinitionsFutcol.rellenaElFormularioDeTorneo(CredencialesCrearTorneoFutcol\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "tipoTorneo",
+                  "categoria",
+                  "fechaInicio",
+                  "fechaFin",
+                  "modalidad",
+                  "organizador",
+                  "precio",
+                  "sede"
+                ]
+              },
+              {
+                "cells": [
+                  "Liga",
+                  "Juvenil",
+                  "20/12/2025",
+                  "25/01/2026",
+                  "Todos contra todos",
+                  "Futcol",
+                  "100.000",
+                  "SENA - Complejo sur"
+                ]
+              }
+            ],
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 483151300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "creara un torneo visible en todos los modulos",
+            "match": {
+              "location": "CreacionTorneoStepDefinitionsFutcol.crearaUnTorneoVisibleEnTodosLosModulos()"
+            },
+            "keyword": "Entonces "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@autenticacion"
+          }
+        ]
+      }
+    ],
+    "name": "Quiero crear un torneo",
+    "description": "",
+    "id": "quiero-crear-un-torneo",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/creacion_torneo_futcol.feature",
+    "tags": []
+  }
+]
