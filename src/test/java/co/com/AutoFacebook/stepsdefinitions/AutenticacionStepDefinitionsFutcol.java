@@ -23,7 +23,7 @@ public class AutenticacionStepDefinitionsFutcol {
 
     @Cuando("^ingrese las credenciales correctas de su rol \\(correo y contrasena\\)$")
     public void ingreseLasCredencialesCorrectasDeSuRolCorreoYContrasena(List<CredencialesInicioSesionFutcol> credencialesFutcol) {
-        theActorInTheSpotlight().wasAbleTo(AutenticarseFutcol.aute(credencialesFutcol));
+            theActorInTheSpotlight().wasAbleTo(AutenticarseFutcol.aute(credencialesFutcol));
     }
 
     @Entonces("^se debe verificar que el usuario haya sido autenticado correctamente y redirigido a su página de inicio de sesion de FutCol$")
