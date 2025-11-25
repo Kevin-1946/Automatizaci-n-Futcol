@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/autenticacion_futcol.feature",
         glue = {"co.com.AutoFacebook.stepsdefinitions", "co.com.AutoFacebook.utils.hooks"},
-        plugin =  {"pretty"},
+        plugin = {"pretty", "html:target/cucumber-reports"},
         snippets = SnippetType.CAMELCASE)
 
 public class AutenticacionRunnerFutcol {

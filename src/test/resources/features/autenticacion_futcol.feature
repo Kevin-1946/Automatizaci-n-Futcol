@@ -1,5 +1,5 @@
 #language:es
-  #author: JavierPulido
+  #author: KevinHernandez
 
 Característica: como usuario de FutCol quiero autenticarme en la pagina web para luego hacer acceder a todas las funcionalidades de mi rol
 
