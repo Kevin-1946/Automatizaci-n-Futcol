@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/creacion_torneo_futcol.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/automatizacion_sedes.feature");
 formatter.feature({
-  "name": "Quiero crear un torneo",
+  "name": "quiero crear una sede",
   "description": "",
   "keyword": "Característica"
 });
 formatter.scenario({
-  "name": "Crear torneo exitosamente",
+  "name": "crear una sede",
   "description": "",
   "keyword": "Escenario",
   "tags": [
@@ -18,47 +18,35 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "rellena el formulario de torneo",
+  "name": "ingrese la informacion en los campos",
   "rows": [
     {
       "cells": [
-        "tipoTorneo",
-        "categoria",
-        "fechaInicio",
-        "fechaFin",
-        "modalidad",
-        "organizador",
-        "precio",
-        "sede"
+        "sede",
+        "direccion"
       ]
     },
     {
       "cells": [
-        "Liga",
-        "Juvenil",
-        "20/12/2025",
-        "25/01/2026",
-        "Todos contra todos",
-        "Futcol",
-        "100.000",
-        "SENA - Complejo sur"
+        "SENA - Complejo sur",
+        "Av. Cra. 30 #17-28, Bogotá"
       ]
     }
   ],
   "keyword": "Cuando "
 });
 formatter.match({
-  "location": "CreacionTorneoStepDefinitionsFutcol.rellenaElFormularioDeTorneo(CredencialesCrearTorneoFutcol\u003e)"
+  "location": "SedesStepDefinitionsFutcol.ingreseLaInformacionEnLosCampos(CredencialesSedesFutcol\u003e)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "creara un torneo visible en todos los modulos",
+  "name": "se creara una sede visible en otro modulos",
   "keyword": "Entonces "
 });
 formatter.match({
-  "location": "CreacionTorneoStepDefinitionsFutcol.crearaUnTorneoVisibleEnTodosLosModulos()"
+  "location": "SedesStepDefinitionsFutcol.seCrearaUnaSedeVisibleEnOtroModulos()"
 });
 formatter.result({
   "status": "passed"
