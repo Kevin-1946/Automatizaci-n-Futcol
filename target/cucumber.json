@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 8389615600,
+              "duration": 10632254300,
               "status": "passed"
             },
             "match": {
@@ -15,45 +15,35 @@
           }
         ],
         "line": 8,
-        "name": "Crear torneo exitosamente",
+        "name": "registrar goles",
         "description": "",
-        "id": "quiero-crear-un-torneo;crear-torneo-exitosamente",
+        "id": "quiero-registrar-los-goles-de-cada-jugador;registrar-goles",
         "type": "scenario",
         "keyword": "Escenario",
         "steps": [
           {
             "result": {
-              "duration": 7992922400,
+              "duration": 4467585200,
               "status": "passed"
             },
             "line": 10,
-            "name": "rellena el formulario de torneo",
+            "name": "ingrese la informacion en los campos de jugador y encuentro",
             "match": {
-              "location": "CreacionTorneoStepDefinitionsFutcol.rellenaElFormularioDeTorneo(CredencialesCrearTorneoFutcol\u003e)"
+              "location": "GolesStepDefinitionsFutcol.ingreseLaInformacionEnLosCamposDeJugadorYEncuentro(CredencialesGolesFutcol\u003e)"
             },
             "rows": [
               {
                 "cells": [
-                  "tipoTorneo",
-                  "categoria",
-                  "fechaInicio",
-                  "fechaFin",
-                  "modalidad",
-                  "organizador",
-                  "precio",
-                  "sede"
+                  "idjugadorgoles",
+                  "idencuentrogoles",
+                  "cantidadgoles"
                 ]
               },
               {
                 "cells": [
-                  "Liga",
-                  "Juvenil",
-                  "20/12/2025",
-                  "25/01/2026",
-                  "Todos contra todos",
-                  "Futcol",
-                  "100.000",
-                  "SENA - Complejo sur"
+                  "4",
+                  "3",
+                  "3"
                 ]
               }
             ],
@@ -61,13 +51,13 @@
           },
           {
             "result": {
-              "duration": 483151300,
+              "duration": 540175000,
               "status": "passed"
             },
             "line": 13,
-            "name": "creara un torneo visible en todos los modulos",
+            "name": "se crearan los goles visibles en otro modulos",
             "match": {
-              "location": "CreacionTorneoStepDefinitionsFutcol.crearaUnTorneoVisibleEnTodosLosModulos()"
+              "location": "GolesStepDefinitionsFutcol.seCrearanLosGolesVisiblesEnOtroModulos()"
             },
             "keyword": "Entonces "
           }
@@ -79,11 +69,11 @@
         ]
       }
     ],
-    "name": "Quiero crear un torneo",
+    "name": "quiero registrar los goles de cada jugador",
     "description": "",
-    "id": "quiero-crear-un-torneo",
+    "id": "quiero-registrar-los-goles-de-cada-jugador",
     "keyword": "Característica",
-    "uri": "src/test/resources/features/creacion_torneo_futcol.feature",
+    "uri": "src/test/resources/features/automatizacion_goles.feature",
     "tags": []
   }
 ]

@@ -2,26 +2,16 @@ package co.com.AutoFacebook.tasks.taskcreartorneo;
 
 import co.com.AutoFacebook.models.modelcreartorneo.CredencialesCrearTorneoFutcol;
 import co.com.AutoFacebook.utils.hooks.SesionVariable;
-import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
-import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 
 import static co.com.AutoFacebook.userinterface.userinterfacecreartorneo.autenticacionCrearTorneoFutcol.*;
 import static co.com.AutoFacebook.userinterface.userinterfacecreartorneo.autenticacionCrearTorneoFutcol.SELECCIONTORNEO_SEDE;
 import static co.com.AutoFacebook.userinterface.userinterfacesedes.autenticacionSedesFutcol.BTN_TORNEOS;
-import static co.com.AutoFacebook.userinterface.userinterfacelogin.autenticacionFutcol.*;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class AutenticarseCrearTorneoFutcol implements Task {
