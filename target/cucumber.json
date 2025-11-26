@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 10632254300,
+              "duration": 8803643300,
               "status": "passed"
             },
             "match": {
@@ -15,35 +15,37 @@
           }
         ],
         "line": 8,
-        "name": "registrar goles",
+        "name": "crear una tarjeta",
         "description": "",
-        "id": "quiero-registrar-los-goles-de-cada-jugador;registrar-goles",
+        "id": "quiero-crear-una-tarjeta;crear-una-tarjeta",
         "type": "scenario",
         "keyword": "Escenario",
         "steps": [
           {
             "result": {
-              "duration": 4467585200,
+              "duration": 7480449800,
               "status": "passed"
             },
             "line": 10,
-            "name": "ingrese la informacion en los campos de jugador y encuentro",
+            "name": "rellena el formulario de amonestaciones",
             "match": {
-              "location": "GolesStepDefinitionsFutcol.ingreseLaInformacionEnLosCamposDeJugadorYEncuentro(CredencialesGolesFutcol\u003e)"
+              "location": "AmonestacionesStepdefinitionsFutcol.cuandoRellenaElFormularioDeAmonestaciones(CredencialesAmonestacionFutcol\u003e)"
             },
             "rows": [
               {
                 "cells": [
-                  "idjugadorgoles",
-                  "idencuentrogoles",
-                  "cantidadgoles"
+                  "selectEncuentro",
+                  "selectJugador",
+                  "equipoJugador",
+                  "numeroCamiseta"
                 ]
               },
               {
                 "cells": [
-                  "4",
-                  "3",
-                  "3"
+                  "Millonarios FC Santa Fe",
+                  "Javier Pulido - Millonarios FC",
+                  "Millonarios Fc",
+                  "7"
                 ]
               }
             ],
@@ -51,13 +53,13 @@
           },
           {
             "result": {
-              "duration": 540175000,
+              "duration": 459277400,
               "status": "passed"
             },
-            "line": 13,
-            "name": "se crearan los goles visibles en otro modulos",
+            "line": 15,
+            "name": "se creara una tarjeta",
             "match": {
-              "location": "GolesStepDefinitionsFutcol.seCrearanLosGolesVisiblesEnOtroModulos()"
+              "location": "AmonestacionesStepdefinitionsFutcol.seCrearaUnaTarjeta()"
             },
             "keyword": "Entonces "
           }
@@ -69,11 +71,11 @@
         ]
       }
     ],
-    "name": "quiero registrar los goles de cada jugador",
+    "name": "quiero crear una tarjeta",
     "description": "",
-    "id": "quiero-registrar-los-goles-de-cada-jugador",
+    "id": "quiero-crear-una-tarjeta",
     "keyword": "Característica",
-    "uri": "src/test/resources/features/automatizacion_goles.feature",
+    "uri": "src/test/resources/features/automatizacion_amonestaciones.feature",
     "tags": []
   }
 ]
