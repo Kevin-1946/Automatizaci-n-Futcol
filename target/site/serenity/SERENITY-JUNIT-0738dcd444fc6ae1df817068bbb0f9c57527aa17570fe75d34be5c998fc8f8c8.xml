@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="como usuario de FutCol quiero inscribir mi equipo en un torneo para poder participar" skipped="0" tests="1" time="52.29" timestamp="2025-11-06 02:23:26"><testcase name="Verificar la inscripcion exitosa de un equipo en FutCol"><failure message="Expected validacion suscripcion futcol&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected validacion suscripcion futcol&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;</failure><system-err>Expected validacion suscripcion futcol&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;&#13;
+✽.se debe verificar que la inscripcion haya sido exitosa(src/test/resources/features/suscripcion_futcol.feature:13)&#13;
+</system-err></testcase></testsuite>

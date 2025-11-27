@@ -1,0 +1,85 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6656395700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PreparacionEscenario.preparar(Scenario)"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "crear una inscripcion",
+        "description": "",
+        "id": "quiero-crear-una-inscripcion;crear-una-inscripcion",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7581210000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "ingrese la informacion de la inscripcion",
+            "match": {
+              "location": "InscripcionesStepDefinitionsFutcol.ingreseLaInformacionDeLaInscripcion(CredencialesInscripcionesFutcol\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "idequipoinscripcion",
+                  "idtorneoinscripcion",
+                  "fechainscripcion",
+                  "formadepago",
+                  "estadodepago",
+                  "valorinscripcion"
+                ]
+              },
+              {
+                "cells": [
+                  "3",
+                  "7",
+                  "01/01/2025",
+                  "efectivo",
+                  "realizado",
+                  "1000"
+                ]
+              }
+            ],
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 378301200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "se creara una inscripcion visible en otros modulos",
+            "match": {
+              "location": "InscripcionesStepDefinitionsFutcol.seCrearaUnaInscripcionVisibleEnOtrosModulos()"
+            },
+            "keyword": "Entonces "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@autenticacion"
+          }
+        ]
+      }
+    ],
+    "name": "quiero crear una inscripcion",
+    "description": "",
+    "id": "quiero-crear-una-inscripcion",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/automatizacion_inscripciones.feature",
+    "tags": []
+  }
+]
