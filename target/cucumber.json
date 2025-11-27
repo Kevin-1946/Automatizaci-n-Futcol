@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 8389615600,
+              "duration": 4000970800,
               "status": "passed"
             },
             "match": {
@@ -15,45 +15,37 @@
           }
         ],
         "line": 8,
-        "name": "Crear torneo exitosamente",
+        "name": "crear una tarjeta",
         "description": "",
-        "id": "quiero-crear-un-torneo;crear-torneo-exitosamente",
+        "id": "quiero-crear-una-tarjeta;crear-una-tarjeta",
         "type": "scenario",
         "keyword": "Escenario",
         "steps": [
           {
             "result": {
-              "duration": 7992922400,
+              "duration": 6421477000,
               "status": "passed"
             },
             "line": 10,
-            "name": "rellena el formulario de torneo",
+            "name": "rellena el formulario de amonestaciones",
             "match": {
-              "location": "CreacionTorneoStepDefinitionsFutcol.rellenaElFormularioDeTorneo(CredencialesCrearTorneoFutcol\u003e)"
+              "location": "AmonestacionesStepdefinitionsFutcol.cuandoRellenaElFormularioDeAmonestaciones(CredencialesAmonestacionFutcol\u003e)"
             },
             "rows": [
               {
                 "cells": [
-                  "tipoTorneo",
-                  "categoria",
-                  "fechaInicio",
-                  "fechaFin",
-                  "modalidad",
-                  "organizador",
-                  "precio",
-                  "sede"
+                  "selectEncuentro",
+                  "selectJugador",
+                  "equipoJugador",
+                  "numeroCamiseta"
                 ]
               },
               {
                 "cells": [
-                  "Liga",
-                  "Juvenil",
-                  "20/12/2025",
-                  "25/01/2026",
-                  "Todos contra todos",
-                  "Futcol",
-                  "100.000",
-                  "SENA - Complejo sur"
+                  "Millonarios FC Santa Fe",
+                  "Javier Pulido - Millonarios FC",
+                  "Millonarios Fc",
+                  "7"
                 ]
               }
             ],
@@ -61,13 +53,13 @@
           },
           {
             "result": {
-              "duration": 483151300,
+              "duration": 269699800,
               "status": "passed"
             },
-            "line": 13,
-            "name": "creara un torneo visible en todos los modulos",
+            "line": 15,
+            "name": "se creara una tarjeta",
             "match": {
-              "location": "CreacionTorneoStepDefinitionsFutcol.crearaUnTorneoVisibleEnTodosLosModulos()"
+              "location": "AmonestacionesStepdefinitionsFutcol.seCrearaUnaTarjeta()"
             },
             "keyword": "Entonces "
           }
@@ -79,11 +71,20 @@
         ]
       }
     ],
-    "name": "Quiero crear un torneo",
+    "name": "quiero crear una tarjeta",
     "description": "",
-    "id": "quiero-crear-un-torneo",
+    "id": "quiero-crear-una-tarjeta",
     "keyword": "Característica",
-    "uri": "src/test/resources/features/creacion_torneo_futcol.feature",
+    "uri": "src/test/resources/features/automatizacion_amonestaciones.feature",
+    "tags": []
+  }
+]-un-recibo-de-pago",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/automatizacion_recibodepago.feature",
+    "tags": []
+  }
+]  }
+]urces/features/creacion_torneo_futcol.feature",
     "tags": []
   }
 ]

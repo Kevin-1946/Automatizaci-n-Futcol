@@ -1,5 +1,5 @@
 #language:es
-#author: JavierPulido
+#author: KevinHernandez
 
 Característica: quiero registrar los goles de cada jugador
 
