@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 8389615600,
+              "duration": 6656395700,
               "status": "passed"
             },
             "match": {
@@ -15,45 +15,41 @@
           }
         ],
         "line": 8,
-        "name": "Crear torneo exitosamente",
+        "name": "crear una inscripcion",
         "description": "",
-        "id": "quiero-crear-un-torneo;crear-torneo-exitosamente",
+        "id": "quiero-crear-una-inscripcion;crear-una-inscripcion",
         "type": "scenario",
         "keyword": "Escenario",
         "steps": [
           {
             "result": {
-              "duration": 7992922400,
+              "duration": 7581210000,
               "status": "passed"
             },
             "line": 10,
-            "name": "rellena el formulario de torneo",
+            "name": "ingrese la informacion de la inscripcion",
             "match": {
-              "location": "CreacionTorneoStepDefinitionsFutcol.rellenaElFormularioDeTorneo(CredencialesCrearTorneoFutcol\u003e)"
+              "location": "InscripcionesStepDefinitionsFutcol.ingreseLaInformacionDeLaInscripcion(CredencialesInscripcionesFutcol\u003e)"
             },
             "rows": [
               {
                 "cells": [
-                  "tipoTorneo",
-                  "categoria",
-                  "fechaInicio",
-                  "fechaFin",
-                  "modalidad",
-                  "organizador",
-                  "precio",
-                  "sede"
+                  "idequipoinscripcion",
+                  "idtorneoinscripcion",
+                  "fechainscripcion",
+                  "formadepago",
+                  "estadodepago",
+                  "valorinscripcion"
                 ]
               },
               {
                 "cells": [
-                  "Liga",
-                  "Juvenil",
-                  "20/12/2025",
-                  "25/01/2026",
-                  "Todos contra todos",
-                  "Futcol",
-                  "100.000",
-                  "SENA - Complejo sur"
+                  "3",
+                  "7",
+                  "01/01/2025",
+                  "efectivo",
+                  "realizado",
+                  "1000"
                 ]
               }
             ],
@@ -61,13 +57,13 @@
           },
           {
             "result": {
-              "duration": 483151300,
+              "duration": 378301200,
               "status": "passed"
             },
             "line": 13,
-            "name": "creara un torneo visible en todos los modulos",
+            "name": "se creara una inscripcion visible en otros modulos",
             "match": {
-              "location": "CreacionTorneoStepDefinitionsFutcol.crearaUnTorneoVisibleEnTodosLosModulos()"
+              "location": "InscripcionesStepDefinitionsFutcol.seCrearaUnaInscripcionVisibleEnOtrosModulos()"
             },
             "keyword": "Entonces "
           }
@@ -79,11 +75,11 @@
         ]
       }
     ],
-    "name": "Quiero crear un torneo",
+    "name": "quiero crear una inscripcion",
     "description": "",
-    "id": "quiero-crear-un-torneo",
+    "id": "quiero-crear-una-inscripcion",
     "keyword": "Característica",
-    "uri": "src/test/resources/features/creacion_torneo_futcol.feature",
+    "uri": "src/test/resources/features/automatizacion_inscripciones.feature",
     "tags": []
   }
 ]
