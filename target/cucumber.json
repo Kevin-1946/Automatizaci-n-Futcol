@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 6656395700,
+              "duration": 4000970800,
               "status": "passed"
             },
             "match": {
@@ -15,41 +15,37 @@
           }
         ],
         "line": 8,
-        "name": "crear una inscripcion",
+        "name": "crear una tarjeta",
         "description": "",
-        "id": "quiero-crear-una-inscripcion;crear-una-inscripcion",
+        "id": "quiero-crear-una-tarjeta;crear-una-tarjeta",
         "type": "scenario",
         "keyword": "Escenario",
         "steps": [
           {
             "result": {
-              "duration": 7581210000,
+              "duration": 6421477000,
               "status": "passed"
             },
             "line": 10,
-            "name": "ingrese la informacion de la inscripcion",
+            "name": "rellena el formulario de amonestaciones",
             "match": {
-              "location": "InscripcionesStepDefinitionsFutcol.ingreseLaInformacionDeLaInscripcion(CredencialesInscripcionesFutcol\u003e)"
+              "location": "AmonestacionesStepdefinitionsFutcol.cuandoRellenaElFormularioDeAmonestaciones(CredencialesAmonestacionFutcol\u003e)"
             },
             "rows": [
               {
                 "cells": [
-                  "idequipoinscripcion",
-                  "idtorneoinscripcion",
-                  "fechainscripcion",
-                  "formadepago",
-                  "estadodepago",
-                  "valorinscripcion"
+                  "selectEncuentro",
+                  "selectJugador",
+                  "equipoJugador",
+                  "numeroCamiseta"
                 ]
               },
               {
                 "cells": [
-                  "3",
-                  "7",
-                  "01/01/2025",
-                  "efectivo",
-                  "realizado",
-                  "1000"
+                  "Millonarios FC Santa Fe",
+                  "Javier Pulido - Millonarios FC",
+                  "Millonarios Fc",
+                  "7"
                 ]
               }
             ],
@@ -57,13 +53,13 @@
           },
           {
             "result": {
-              "duration": 378301200,
+              "duration": 269699800,
               "status": "passed"
             },
-            "line": 13,
-            "name": "se creara una inscripcion visible en otros modulos",
+            "line": 15,
+            "name": "se creara una tarjeta",
             "match": {
-              "location": "InscripcionesStepDefinitionsFutcol.seCrearaUnaInscripcionVisibleEnOtrosModulos()"
+              "location": "AmonestacionesStepdefinitionsFutcol.seCrearaUnaTarjeta()"
             },
             "keyword": "Entonces "
           }
@@ -75,11 +71,20 @@
         ]
       }
     ],
-    "name": "quiero crear una inscripcion",
+    "name": "quiero crear una tarjeta",
     "description": "",
-    "id": "quiero-crear-una-inscripcion",
+    "id": "quiero-crear-una-tarjeta",
     "keyword": "Característica",
-    "uri": "src/test/resources/features/automatizacion_inscripciones.feature",
+    "uri": "src/test/resources/features/automatizacion_amonestaciones.feature",
+    "tags": []
+  }
+]-un-recibo-de-pago",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/automatizacion_recibodepago.feature",
+    "tags": []
+  }
+]  }
+]urces/features/creacion_torneo_futcol.feature",
     "tags": []
   }
 ]

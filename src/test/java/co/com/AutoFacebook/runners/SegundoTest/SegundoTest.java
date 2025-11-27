@@ -7,7 +7,10 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         TorneoRunnerFutcol.class,
-        EncuentrosRunnerFutcol.class
+        EncuentrosRunnerFutcol.class,
+        InscripcionesRunnerFutcol.class,
+        RecibodepagoRunnerFutcol.class,
+        AmonestacionesRunnerFutcol.class
 })
 public class SegundoTest {
 }
