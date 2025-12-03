@@ -5,6 +5,7 @@ import co.com.AutoFacebook.questions.questionscreartorneo.ValidacionCrearTorneoF
 import co.com.AutoFacebook.tasks.taskcreartorneo.AutenticarseCrearTorneoFutcol;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+import static org.hamcrest.Matchers.is;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class CreacionTorneoStepDefinitionsFutcol {
 
     @Entonces("^creara un torneo visible en todos los modulos$")
     public void crearaUnTorneoVisibleEnTodosLosModulos() {
-        theActorInTheSpotlight().should(seeThat(ValidacionCrearTorneoFutcol.validacionCrearTorneoFutcol()));
+        theActorInTheSpotlight().should(seeThat(ValidacionCrearTorneoFutcol.validacionCrearTorneoFutcol(), is(true)));
     }
 
 }

@@ -24,6 +24,6 @@ public class autenticacionEncuentrosFutcol extends PageObject {
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/input[4]");
     public static Target BTN_CREARENCUENTRO = Target.the("Clique en el boton Crear")
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/button");
-    public static Target MENSAJEENCUENTROS_CONFIRMAR= Target.the("Encuentros")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h2");
+    public static Target MENSAJEENCUENTROS_CONFIRMAR= Target.the("Encuentro creado exitosamente")
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div");
 }

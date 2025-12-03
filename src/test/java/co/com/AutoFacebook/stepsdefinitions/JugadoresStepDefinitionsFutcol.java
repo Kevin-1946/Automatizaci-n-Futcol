@@ -5,6 +5,7 @@ import co.com.AutoFacebook.questions.questionsjugadores.ValidacionJugadoresFutco
 import co.com.AutoFacebook.tasks.taskjugadores.AutenticarseJugadoresFutcol;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+import static org.hamcrest.Matchers.is;
 import java.util.List;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -18,6 +19,6 @@ public class JugadoresStepDefinitionsFutcol {
 
     @Entonces("^se creara un jugador$")
     public void seCrearaUnJugador() {
-        theActorInTheSpotlight().should(seeThat(ValidacionJugadoresFutcol.validacionJugadoresFutcol()));
+        theActorInTheSpotlight().should(seeThat(ValidacionJugadoresFutcol.validacionJugadoresFutcol(), is(true)));
     }
 }

@@ -5,6 +5,8 @@ import co.com.AutoFacebook.questions.questionsgoles.ValidacionGolesFutcol;
 import co.com.AutoFacebook.tasks.taskgoles.AutenticarseGolesFutcol;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+import static org.hamcrest.Matchers.is;
+
 import java.util.List;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -18,6 +20,6 @@ public class GolesStepDefinitionsFutcol {
 
     @Entonces("^se crearan los goles visibles en otro modulos$")
     public void seCrearanLosGolesVisiblesEnOtroModulos() {
-        theActorInTheSpotlight().should(seeThat(ValidacionGolesFutcol.validacionGolesFutcol()));
+        theActorInTheSpotlight().should(seeThat(ValidacionGolesFutcol.validacionGolesFutcol(), is(true)));
     }
 }

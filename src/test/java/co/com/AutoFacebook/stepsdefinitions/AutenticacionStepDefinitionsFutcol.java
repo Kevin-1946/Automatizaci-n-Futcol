@@ -7,6 +7,7 @@ import co.com.AutoFacebook.tasks.tasklogin.AutenticarseFutcol;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
+import static org.hamcrest.Matchers.is;
 
 import java.util.List;
 
@@ -28,6 +29,6 @@ public class AutenticacionStepDefinitionsFutcol {
 
     @Entonces("^se debe verificar que el usuario haya sido autenticado correctamente y redirigido a su página de inicio de sesion de FutCol$")
     public void seDebeVerificarQueElUsuarioHayaSidoAutenticadoCorrectamenteYRedirigidoASuPáginaDeInicioDeSesionDeFutCol() {
-        theActorInTheSpotlight().should(seeThat(ValidacionLoginFutcol.validacionLoginFutcol()));
+        theActorInTheSpotlight().should(seeThat(ValidacionLoginFutcol.validacionLoginFutcol(), is(true)));
     }
 }

@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static co.com.AutoFacebook.userinterface.userinterfaceamonestaciones.autenticarseAmonestacionesFutcol.MENSAJECREARAMONESTACION_CONFIRMAR;
+import static co.com.AutoFacebook.userinterface.userinterfaceencuentros.autenticacionEncuentrosFutcol.MENSAJEENCUENTROS_CONFIRMAR;
 
 public class ValidacionAmonestacionFutcol implements Question<Boolean> {
 
@@ -19,13 +20,7 @@ public class ValidacionAmonestacionFutcol implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        try {
-            String texto = Text.of(MENSAJECREARAMONESTACION_CONFIRMAR).viewedBy(actor).asString().trim();
-            logger.info("Texto encontrado en MENSAJE_ORDEN: " + texto);
-            return MENSAJECREARAMONESTACION_ESPERADO.equalsIgnoreCase(texto);
-        } catch (Exception e) {
-            logger.error("No se encontró el Mensaje: " + e.getMessage());
-            return false;
-        }
+        String texto = Text.of(MENSAJEENCUENTROS_CONFIRMAR).viewedBy(actor).asString().trim();
+        return MENSAJECREARAMONESTACION_ESPERADO.equalsIgnoreCase(texto);
     }
 }

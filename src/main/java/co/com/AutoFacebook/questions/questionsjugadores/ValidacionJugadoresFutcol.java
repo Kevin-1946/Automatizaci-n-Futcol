@@ -5,6 +5,8 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static co.com.AutoFacebook.userinterface.userinterfaceencuentros.autenticacionEncuentrosFutcol.MENSAJEENCUENTROS_CONFIRMAR;
 import static co.com.AutoFacebook.userinterface.userinterfacejugadores.autenticacionJugadoresFutcol.MENSAJEJUGADORES_CONFIRMAR;
 
 public class ValidacionJugadoresFutcol implements Question<Boolean> {
@@ -18,13 +20,7 @@ public class ValidacionJugadoresFutcol implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        try {
-            String texto = Text.of(MENSAJEJUGADORES_CONFIRMAR).viewedBy(actor).asString().trim();
-            logger.info("Texto encontrado en MENSAJEJUECES_CONFIRMAR: {}", texto);
-            return MENSAJEJUGADORES_ESPERADO.equalsIgnoreCase(texto);
-        } catch (Exception e) {
-            logger.error("No se encontró el mensaje de confirmación de sedes: {}", e.getMessage());
-            return false;
-        }
+        String texto = Text.of(MENSAJEENCUENTROS_CONFIRMAR).viewedBy(actor).asString().trim();
+        return MENSAJEJUGADORES_ESPERADO.equalsIgnoreCase(texto);
     }
 }

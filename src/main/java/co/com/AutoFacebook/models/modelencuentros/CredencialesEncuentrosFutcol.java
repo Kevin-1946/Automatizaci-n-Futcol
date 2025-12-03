@@ -2,10 +2,19 @@ package co.com.AutoFacebook.models.modelencuentros;
 
 public class CredencialesEncuentrosFutcol {
 
+    private String nombreencuentro;
     private String diaencuentro;
     private String horaencuentro;
     private String goleslocalencuentro;
     private String golesvisitanteencuentro;
+
+    public String getNombreencuentro() {
+        return nombreencuentro;
+    }
+
+    public void setNombreencuentro(String nombreencuentro) {
+        this.nombreencuentro = nombreencuentro;
+    }
 
     public String getDiaencuentro() {
         return diaencuentro;
@@ -39,7 +48,8 @@ public class CredencialesEncuentrosFutcol {
         this.golesvisitanteencuentro = golesvisitanteencuentro;
     }
 
-    public CredencialesEncuentrosFutcol(String diaencuentro, String horaencuentro, String goleslocalencuentro, String golesvisitanteencuentro) {
+    public CredencialesEncuentrosFutcol(String nombreencuentro, String diaencuentro, String horaencuentro, String goleslocalencuentro, String golesvisitanteencuentro) {
+        this.nombreencuentro = nombreencuentro;
         this.diaencuentro = diaencuentro;
         this.horaencuentro = horaencuentro;
         this.goleslocalencuentro = goleslocalencuentro;

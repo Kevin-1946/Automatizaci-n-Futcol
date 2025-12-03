@@ -5,6 +5,7 @@ import co.com.AutoFacebook.questions.questionssedes.ValidacionSedesFutcol;
 import co.com.AutoFacebook.tasks.tasksedes.AutenticarseSedesFutcol;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+import static org.hamcrest.Matchers.is;
 import java.util.List;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -18,6 +19,6 @@ public class SedesStepDefinitionsFutcol {
 
     @Entonces("^se creara una sede visible en otro modulos$")
     public void seCrearaUnaSedeVisibleEnOtroModulos() {
-        theActorInTheSpotlight().should(seeThat(ValidacionSedesFutcol.validacionSedesFutcol()));
+        theActorInTheSpotlight().should(seeThat(ValidacionSedesFutcol.validacionSedesFutcol(), is(true)));
     }
 }

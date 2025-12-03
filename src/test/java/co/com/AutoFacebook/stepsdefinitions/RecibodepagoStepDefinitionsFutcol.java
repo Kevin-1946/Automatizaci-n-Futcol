@@ -5,6 +5,7 @@ import co.com.AutoFacebook.questions.questionsrecibodepago.ValidacionRecibodepag
 import co.com.AutoFacebook.tasks.taskrecibodepago.AutenticarseRecibodepagoFutcol;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+import static org.hamcrest.Matchers.is;
 import java.util.List;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -17,6 +18,6 @@ public class RecibodepagoStepDefinitionsFutcol {
 
     @Entonces("^se creara un recibo de pago visible en otros modulos$")
     public void seCrearaUnReciboDePagoVisibleEnOtrosModulos() {
-        theActorInTheSpotlight().should(seeThat(ValidacionRecibodepagoFutcol.validacionRecibodepagoFutcol()));
+        theActorInTheSpotlight().should(seeThat(ValidacionRecibodepagoFutcol.validacionRecibodepagoFutcol(), is(true)));
     }
 }

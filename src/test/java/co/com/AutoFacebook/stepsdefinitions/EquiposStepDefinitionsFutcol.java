@@ -5,6 +5,9 @@ import co.com.AutoFacebook.questions.questionsequipos.ValidacionEquiposFutcol;
 import co.com.AutoFacebook.tasks.taskequipos.AutenticarseEquiposFutcol;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+
+import static org.hamcrest.Matchers.is;
+
 import java.util.List;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -19,6 +22,6 @@ public class EquiposStepDefinitionsFutcol {
 
     @Entonces("^se creara un equipo visible en otros modulos$")
     public void seCrearaUnEquipoVisibleEnOtrosModulos() {
-        theActorInTheSpotlight().should(seeThat(ValidacionEquiposFutcol.validacionEquiposFutcol()));
+        theActorInTheSpotlight().should(seeThat(ValidacionEquiposFutcol.validacionEquiposFutcol(), is(true)));
     }
 }

@@ -5,6 +5,7 @@ import co.com.AutoFacebook.questions.questionsamonestaciones.ValidacionAmonestac
 import co.com.AutoFacebook.tasks.taskamonestaciones.AutenticarseAmonestacionFutcol;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+import static org.hamcrest.Matchers.is;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class AmonestacionesStepdefinitionsFutcol {
 
     @Entonces("^se creara una tarjeta$")
     public void seCrearaUnaTarjeta() {
-        theActorInTheSpotlight().should(seeThat(ValidacionAmonestacionFutcol.validacionAmonestacionFutcol()));
+        theActorInTheSpotlight().should(seeThat(ValidacionAmonestacionFutcol.validacionAmonestacionFutcol(), is(true)));
     }
 
 }

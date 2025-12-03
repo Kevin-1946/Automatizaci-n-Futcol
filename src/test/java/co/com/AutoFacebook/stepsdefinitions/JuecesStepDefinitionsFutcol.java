@@ -5,6 +5,7 @@ import co.com.AutoFacebook.questions.questionsjueces.ValidacionJuecesFutcol;
 import co.com.AutoFacebook.tasks.taskjueces.AutenticarseJuecesFutcol;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+import static org.hamcrest.Matchers.is;
 import java.util.List;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -17,6 +18,6 @@ public class JuecesStepDefinitionsFutcol {
 
     @Entonces("^se creara un juez visible en otro modulos$")
     public void seCrearaUnJuezVisibleEnOtroModulos() {
-        theActorInTheSpotlight().should(seeThat(ValidacionJuecesFutcol.validacionJuecesFutcol()));
+        theActorInTheSpotlight().should(seeThat(ValidacionJuecesFutcol.validacionJuecesFutcol(), is(true)));
     }
 }
