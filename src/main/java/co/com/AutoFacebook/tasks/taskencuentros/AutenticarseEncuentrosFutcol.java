@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.serenitybdd.screenplay.ensure.Ensure; // 👈 Faltaba
+import net.serenitybdd.screenplay.ensure.Ensure;
 
 import java.util.List;
 
