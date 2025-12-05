@@ -10,9 +10,12 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.MoveMouse;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.List;
 
+import static co.com.AutoFacebook.userinterface.userinterfaceamonestaciones.autenticarseAmonestacionesFutcol.MENSAJECREARAMONESTACION_CONFIRMAR;
 import static co.com.AutoFacebook.userinterface.userinterfacecreartorneo.autenticacionCrearTorneoFutcol.SELECCION_MODALIDAD;
 import static co.com.AutoFacebook.userinterface.userinterfacecreartorneo.autenticacionCrearTorneoFutcol.SELECCION_TIPO;
 import static co.com.AutoFacebook.userinterface.userinterfaceencuentros.autenticacionEncuentrosFutcol.*;
@@ -45,20 +48,15 @@ public class AutenticarseInscripcionesFutcol implements Task {
         actor.attemptsTo(
                 MoveMouse.to(BTN_PARTICIPANTES),
                 Click.on(OPCION_INSCRIPCIONES),
-                Click.on(OPCION_IDEQUIPO),
                 Enter.theValue(cif.getIdequipoinscripcion()).into(OPCION_IDEQUIPO),
-                Click.on(OPCION_IDTORNEO),
                 Enter.theValue(cif.getIdtorneoinscripcion()).into(OPCION_IDTORNEO),
-                Click.on(OPCION_FECHAINSCRIPCION),
                 Enter.theValue(cif.getFechainscripcion()).into(OPCION_FECHAINSCRIPCION),
-                Click.on(OPCION_FORMADEPAGO),
                 Enter.theValue(cif.getFormadepago()).into(OPCION_FORMADEPAGO),
-                Click.on(OPCION_ESTADODEPAGO),
                 Enter.theValue(cif.getEstadodepago()).into(OPCION_ESTADODEPAGO),
                 Click.on(SELECCION_CORREOELECTRONICO),
-                Click.on(OPCION_VALORINSCRIPCION),
                 Enter.theValue(cif.getValorinscripcion()).into(OPCION_VALORINSCRIPCION),
-                Click.on(BTN_CREARINSCRIPCION)
+                Click.on(BTN_CREARINSCRIPCION),
+                WaitUntil.the(MENSAJEINSCRIPCIONES_CONFIRMAR, WebElementStateMatchers.containsText("Inscripción registrada exitosamente")).forNoMoreThan(10).seconds()
         );
         // theActorInTheSpotlight().remember(SesionVariable.usuario.toString(), cgf.getIdjugadorgoles());
     }

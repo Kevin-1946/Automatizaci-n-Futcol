@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 4000970800,
+              "duration": 4809330700,
               "status": "passed"
             },
             "match": {
@@ -15,37 +15,33 @@
           }
         ],
         "line": 8,
-        "name": "crear una tarjeta",
+        "name": "crear una sede",
         "description": "",
-        "id": "quiero-crear-una-tarjeta;crear-una-tarjeta",
+        "id": "quiero-crear-una-sede;crear-una-sede",
         "type": "scenario",
         "keyword": "Escenario",
         "steps": [
           {
             "result": {
-              "duration": 6421477000,
+              "duration": 4837562100,
               "status": "passed"
             },
             "line": 10,
-            "name": "rellena el formulario de amonestaciones",
+            "name": "ingrese la informacion en los campos",
             "match": {
-              "location": "AmonestacionesStepdefinitionsFutcol.cuandoRellenaElFormularioDeAmonestaciones(CredencialesAmonestacionFutcol\u003e)"
+              "location": "SedesStepDefinitionsFutcol.ingreseLaInformacionEnLosCampos(CredencialesSedesFutcol\u003e)"
             },
             "rows": [
               {
                 "cells": [
-                  "selectEncuentro",
-                  "selectJugador",
-                  "equipoJugador",
-                  "numeroCamiseta"
+                  "sede",
+                  "direccion"
                 ]
               },
               {
                 "cells": [
-                  "Millonarios FC Santa Fe",
-                  "Javier Pulido - Millonarios FC",
-                  "Millonarios Fc",
-                  "7"
+                  "SENA - Complejo sur",
+                  "Av. Cra. 30 #17-28, Bogotá"
                 ]
               }
             ],
@@ -53,13 +49,13 @@
           },
           {
             "result": {
-              "duration": 269699800,
+              "duration": 365514000,
               "status": "passed"
             },
-            "line": 15,
-            "name": "se creara una tarjeta",
+            "line": 13,
+            "name": "se creara una sede visible en otro modulos",
             "match": {
-              "location": "AmonestacionesStepdefinitionsFutcol.seCrearaUnaTarjeta()"
+              "location": "SedesStepDefinitionsFutcol.seCrearaUnaSedeVisibleEnOtroModulos()"
             },
             "keyword": "Entonces "
           }
@@ -71,20 +67,18 @@
         ]
       }
     ],
-    "name": "quiero crear una tarjeta",
+    "name": "quiero crear una sede",
     "description": "",
-    "id": "quiero-crear-una-tarjeta",
+    "id": "quiero-crear-una-sede",
     "keyword": "Característica",
-    "uri": "src/test/resources/features/automatizacion_amonestaciones.feature",
+    "uri": "src/test/resources/features/automatizacion_sedes.feature",
     "tags": []
   }
-]-un-recibo-de-pago",
+] "quiero crear un jugador",
+    "description": "",
+    "id": "quiero-crear-un-jugador",
     "keyword": "Característica",
-    "uri": "src/test/resources/features/automatizacion_recibodepago.feature",
-    "tags": []
-  }
-]  }
-]urces/features/creacion_torneo_futcol.feature",
+    "uri": "src/test/resources/features/automatizacion_jugadores.feature",
     "tags": []
   }
 ]

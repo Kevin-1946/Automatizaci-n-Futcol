@@ -10,7 +10,7 @@ import static co.com.AutoFacebook.userinterface.userinterfaceequipos.autenticaci
 public class ValidacionEquiposFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidacionEquiposFutcol.class);
-    private static final String MENSAJEEQUIPOS_ESPERADO = "Gestión de Equipos";
+    private static final String MENSAJEEQUIPOS_ESPERADO = "Equipo creado exitosamente";
 
     public static ValidacionEquiposFutcol validacionEquiposFutcol() {
         return new ValidacionEquiposFutcol();
@@ -23,7 +23,7 @@ public class ValidacionEquiposFutcol implements Question<Boolean> {
             logger.info("Texto encontrado en MENSAJEEQUIPOS_CONFIRMAR: {}", texto);
             return MENSAJEEQUIPOS_ESPERADO.equalsIgnoreCase(texto);
         } catch (Exception e) {
-            logger.error("No se encontró el mensaje de confirmación de sedes: {}", e.getMessage());
+            logger.error("No se encontró el mensaje de confirmación de equipos: {} ", e.getMessage());
             return false;
         }
     }

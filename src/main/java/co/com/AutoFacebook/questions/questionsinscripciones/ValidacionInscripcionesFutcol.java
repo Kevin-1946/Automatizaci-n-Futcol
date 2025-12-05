@@ -11,7 +11,7 @@ import static co.com.AutoFacebook.userinterface.userinterfaceinscripciones.auten
 public class ValidacionInscripcionesFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(co.com.AutoFacebook.questions.questionsinscripciones.ValidacionInscripcionesFutcol.class);
-    private static final String MENSAJEINSCRIPCIONES_ESPERADO = "Inscripciones";
+    private static final String MENSAJEINSCRIPCIONES_ESPERADO = "Inscripción registrada exitosamente";
 
     public static co.com.AutoFacebook.questions.questionsinscripciones.ValidacionInscripcionesFutcol validacionInscripcionesFutcol() {
         return new co.com.AutoFacebook.questions.questionsinscripciones.ValidacionInscripcionesFutcol();

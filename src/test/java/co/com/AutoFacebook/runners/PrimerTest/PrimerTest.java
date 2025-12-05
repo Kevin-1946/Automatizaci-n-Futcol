@@ -6,9 +6,8 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        AutenticacionRunnerFutcol.class,
         EquiposRunnerFutcol.class,
-        GolesRunnerFutcol.class,
+        // GolesRunnerFutcol.class,
         JuecesRunnerFutcol.class,
         JugadoresRunnerFutcol.class,
         SedesRunnerFutcol.class

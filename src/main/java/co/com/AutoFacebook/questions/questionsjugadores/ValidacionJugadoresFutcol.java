@@ -10,7 +10,7 @@ import static co.com.AutoFacebook.userinterface.userinterfacejugadores.autentica
 public class ValidacionJugadoresFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidacionJugadoresFutcol.class);
-    private static final String MENSAJEJUGADORES_ESPERADO = "Lista de Jugadores";
+    private static final String MENSAJEJUGADORES_ESPERADO = "Jugador creado exitosamente";
 
     public static ValidacionJugadoresFutcol validacionJugadoresFutcol() {
         return new ValidacionJugadoresFutcol();
