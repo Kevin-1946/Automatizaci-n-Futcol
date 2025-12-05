@@ -8,8 +8,8 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         TorneoRunnerFutcol.class,
         EncuentrosRunnerFutcol.class,
-        // InscripcionesRunnerFutcol.class,
-        // RecibodepagoRunnerFutcol.class,
+        InscripcionesRunnerFutcol.class,
+        RecibodepagoRunnerFutcol.class,
         AmonestacionesRunnerFutcol.class
 })
 public class SegundoTest {
