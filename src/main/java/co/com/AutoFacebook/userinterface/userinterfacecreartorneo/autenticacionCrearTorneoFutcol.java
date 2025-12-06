@@ -37,5 +37,5 @@ public class autenticacionCrearTorneoFutcol extends PageObject {
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/button");
 
     public static Target MENSAJECREARTORNEO_CONFIRMAR = Target.the("Mensaje de éxito")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h2[1]");
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div[1]");
 }

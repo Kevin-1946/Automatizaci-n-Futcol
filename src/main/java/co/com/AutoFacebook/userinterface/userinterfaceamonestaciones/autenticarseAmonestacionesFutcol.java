@@ -24,7 +24,6 @@ public class autenticarseAmonestacionesFutcol extends PageObject {
     public static Target BTN_CREARAMONESTACION = Target.the("Input organizador")
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/button");
 
-
     public static Target MENSAJECREARAMONESTACION_CONFIRMAR = Target.the("Input organizador")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h2");
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div");
 }

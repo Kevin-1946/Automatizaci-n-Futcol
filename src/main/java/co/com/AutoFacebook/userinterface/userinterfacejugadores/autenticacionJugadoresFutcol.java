@@ -23,5 +23,5 @@ public class autenticacionJugadoresFutcol extends PageObject {
     public static Target BTN_CREARJUGADOR= Target.the("Gestión de Sedes")
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/button");
     public static Target MENSAJEJUGADORES_CONFIRMAR= Target.the("Gestión de Sedes")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h3");
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div");
 }

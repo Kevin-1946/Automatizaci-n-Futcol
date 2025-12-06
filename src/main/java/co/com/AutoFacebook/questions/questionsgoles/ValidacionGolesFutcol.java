@@ -10,7 +10,7 @@ import static co.com.AutoFacebook.userinterface.userinterfacegoles.autenticacion
 public class ValidacionGolesFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidacionGolesFutcol.class);
-    private static final String MENSAJEGOLES_ESPERADO = "Goles por Jugador";
+    private static final String MENSAJEGOLES_ESPERADO = "Gol registrado exitosamente";
 
     public static ValidacionGolesFutcol validacionGolesFutcol() {
         return new ValidacionGolesFutcol();
@@ -18,13 +18,7 @@ public class ValidacionGolesFutcol implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        try {
-            String texto = Text.of(MENSAJEGOLES_CONFIRMAR).viewedBy(actor).asString().trim();
-            logger.info("Texto encontrado en MENSAJESEDES_CONFIRMAR: {}", texto);
-            return MENSAJEGOLES_ESPERADO.equalsIgnoreCase(texto);
-        } catch (Exception e) {
-            logger.error("No se encontró el mensaje de confirmación de sedes: {}", e.getMessage());
-            return false;
-        }
+        String texto = Text.of(MENSAJEGOLES_CONFIRMAR).viewedBy(actor).asString().trim();
+        return MENSAJEGOLES_ESPERADO.equalsIgnoreCase(texto);
     }
 }

@@ -15,5 +15,5 @@ public class autenticacionEquiposFutcol extends PageObject {
     public static Target BTN_CREAREQUIPO = Target.the("Clique en el boton Crear")
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/div[4]/button");
     public static Target MENSAJEEQUIPOS_CONFIRMAR= Target.the("Gestión de Sedes")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h2");
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div[1]");
 }

@@ -5,11 +5,14 @@ import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.List;
 
 import static co.com.AutoFacebook.userinterface.userinterfaceamonestaciones.autenticarseAmonestacionesFutcol.*;
 import static co.com.AutoFacebook.userinterface.userinterfacesedes.autenticacionSedesFutcol.BTN_TORNEOS;
+import static co.com.AutoFacebook.userinterface.userinterfacesedes.autenticacionSedesFutcol.MENSAJESEDES_CONFIRMAR;
 
 
 public class AutenticarseAmonestacionFutcol implements Task {
@@ -36,17 +39,13 @@ public class AutenticarseAmonestacionFutcol implements Task {
         actor.attemptsTo(
                 MoveMouse.to(BTN_TORNEOS),
                 Click.on(OPCION_AMONESTACIONES),
-                Click.on(SELECCION_ENCUENTRO),
-                SelectFromOptions.byVisibleText("Millonarios FC vs Santa Fe - 2025-09-15").from(SELECCION_ENCUENTRO),
-                Click.on(SELECCION_JUGADOR),
-                SelectFromOptions.byVisibleText("Javier Pulido - Millonarios FC").from(SELECCION_JUGADOR),
-                Click.on(CAMPO_NUMEROCAMISETA),
+                SelectFromOptions.byVisibleText("Los dragones vs Combo alpinito - 2025-12-24").from(SELECCION_ENCUENTRO),
+                SelectFromOptions.byVisibleText("Camilo Suarez - Los dragones").from(SELECCION_JUGADOR),
                 Enter.theValue(cef.getNumeroCamiseta()).into(CAMPO_NUMEROCAMISETA),
                 Click.on(BTN_TARJETA),
-                Click.on(BTN_CREARAMONESTACION)
+                Click.on(BTN_CREARAMONESTACION),
+                WaitUntil.the(MENSAJECREARAMONESTACION_CONFIRMAR, WebElementStateMatchers.containsText("Amonestación creada exitosamente")).forNoMoreThan(10).seconds()
         );
-
-        //nTheSpotlight().remember(SesionVariable.usuario.toString(), ct.getOrganizador());
-
+        // TheSpotlight().remember(SesionVariable.usuario.toString(), ct.getOrganizador());
     }
 }

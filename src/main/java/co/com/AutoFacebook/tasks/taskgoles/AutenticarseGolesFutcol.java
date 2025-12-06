@@ -8,6 +8,9 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.MoveMouse;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+
 import java.util.List;
 import static co.com.AutoFacebook.userinterface.userinterfacegoles.autenticacionGolesFutcol.*;
 import static co.com.AutoFacebook.userinterface.userinterfacesedes.autenticacionSedesFutcol.BTN_TORNEOS;
@@ -40,7 +43,8 @@ public class AutenticarseGolesFutcol implements Task {
                 Enter.theValue(cgf.getIdjugadorgoles()).into(CAMPO_IDJUGADORGOLES),
                 Enter.theValue(cgf.getIdencuentrogoles()).into(CAMPO_IDENCUENTROGOLES),
                 Enter.theValue(cgf.getCantidadgoles()).into(CAMPO_CANTIDADGOLES),
-                Click.on(BTN_REGISTRARGOLES)
+                Click.on(BTN_REGISTRARGOLES),
+                WaitUntil.the(MENSAJEGOLES_CONFIRMAR, WebElementStateMatchers.containsText("Gol registrado exitosamente")).forNoMoreThan(10).seconds()
         );
         theActorInTheSpotlight().remember(SesionVariable.usuario.toString(), cgf.getIdjugadorgoles());
     }

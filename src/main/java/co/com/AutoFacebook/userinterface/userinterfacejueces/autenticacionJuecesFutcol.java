@@ -21,5 +21,5 @@ public class autenticacionJuecesFutcol extends PageObject {
     public static Target BTN_CREARJUEZ= Target.the("Gestión de Sedes")
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/button");
     public static Target MENSAJEJUECES_CONFIRMAR= Target.the("Gestión de Sedes")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h2");
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div");
 }

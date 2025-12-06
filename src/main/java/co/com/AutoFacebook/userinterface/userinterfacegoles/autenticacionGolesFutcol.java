@@ -19,5 +19,5 @@ public class autenticacionGolesFutcol extends PageObject {
     public static Target BTN_REGISTRARGOLES = Target.the("Clique en el boton Crear")
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/button");
     public static Target MENSAJEGOLES_CONFIRMAR= Target.the("Gestión de Sedes")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h2");
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div");
 }

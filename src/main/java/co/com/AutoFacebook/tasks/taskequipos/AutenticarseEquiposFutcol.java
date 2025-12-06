@@ -10,9 +10,12 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.MoveMouse;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.List;
+
+import static co.com.AutoFacebook.userinterface.userinterfaceamonestaciones.autenticarseAmonestacionesFutcol.MENSAJECREARAMONESTACION_CONFIRMAR;
 import static co.com.AutoFacebook.userinterface.userinterfaceequipos.autenticacionEquiposFutcol.*;
 import static co.com.AutoFacebook.userinterface.userinterfacesedes.autenticacionSedesFutcol.BTN_TORNEOS;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -43,12 +46,10 @@ public class AutenticarseEquiposFutcol implements Task {
                 MoveMouse.to(BTN_TORNEOS),
                 Click.on(OPCION_EQUIPOS),
                 Enter.theValue(cef.getEquiponombre()).into(CAMPO_EQUIPO),
-                Click.on(SELECCION_TORNEO),
                 SelectFromOptions.byVisibleText("Relampago").from(SELECCION_TORNEO),
                 Click.on(BTN_CREAREQUIPO),
-                Alerts.aceptarSiAparece(3),
-                WaitUntil.the(MENSAJEEQUIPOS_CONFIRMAR, isVisible()).forNoMoreThan(10).seconds()
+                WaitUntil.the(MENSAJEEQUIPOS_CONFIRMAR, WebElementStateMatchers.containsText("Equipo creado exitosamente")).forNoMoreThan(10).seconds()
         );
-        theActorInTheSpotlight().remember(SesionVariable.usuario.toString(), cef.getEquiponombre());
+        // theActorInTheSpotlight().remember(SesionVariable.usuario.toString(), cef.getEquiponombre());
     }
 }

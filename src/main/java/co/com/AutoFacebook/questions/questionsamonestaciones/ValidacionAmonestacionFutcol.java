@@ -11,7 +11,7 @@ import static co.com.AutoFacebook.userinterface.userinterfaceamonestaciones.aute
 public class ValidacionAmonestacionFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(co.com.AutoFacebook.questions.questionsamonestaciones.ValidacionAmonestacionFutcol.class);
-    private static final String MENSAJECREARAMONESTACION_ESPERADO = "Amonestaciones";
+    private static final String MENSAJECREARAMONESTACION_ESPERADO = "Amonestación creada exitosamente";
 
     public static co.com.AutoFacebook.questions.questionsamonestaciones.ValidacionAmonestacionFutcol validacionAmonestacionFutcol() {
         return new co.com.AutoFacebook.questions.questionsamonestaciones.ValidacionAmonestacionFutcol();
@@ -24,7 +24,7 @@ public class ValidacionAmonestacionFutcol implements Question<Boolean> {
             logger.info("Texto encontrado en MENSAJE_ORDEN: " + texto);
             return MENSAJECREARAMONESTACION_ESPERADO.equalsIgnoreCase(texto);
         } catch (Exception e) {
-            logger.error("No se encontró el Mensaje: " + e.getMessage());
+            logger.error("No se encontró el mensaje de confirmación de amonestacion: {} " + e.getMessage());
             return false;
         }
     }
