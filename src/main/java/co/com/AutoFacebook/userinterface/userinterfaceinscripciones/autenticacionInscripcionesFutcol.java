@@ -25,5 +25,5 @@ public class autenticacionInscripcionesFutcol extends PageObject {
     public static Target BTN_CREARINSCRIPCION = Target.the("Ingrese la direccion de la sede")
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/button");
     public static Target MENSAJEINSCRIPCIONES_CONFIRMAR= Target.the("Administrador")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h2");
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div");
 }

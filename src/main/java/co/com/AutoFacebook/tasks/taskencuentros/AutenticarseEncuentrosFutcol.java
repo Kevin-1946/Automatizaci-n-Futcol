@@ -9,9 +9,12 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.MoveMouse;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.List;
 
+import static co.com.AutoFacebook.userinterface.userinterfaceamonestaciones.autenticarseAmonestacionesFutcol.MENSAJECREARAMONESTACION_CONFIRMAR;
 import static co.com.AutoFacebook.userinterface.userinterfacecreartorneo.autenticacionCrearTorneoFutcol.SELECCION_MODALIDAD;
 import static co.com.AutoFacebook.userinterface.userinterfacecreartorneo.autenticacionCrearTorneoFutcol.SELECCION_TIPO;
 import static co.com.AutoFacebook.userinterface.userinterfaceencuentros.autenticacionEncuentrosFutcol.*;
@@ -19,6 +22,7 @@ import static co.com.AutoFacebook.userinterface.userinterfaceequipos.autenticaci
 import static co.com.AutoFacebook.userinterface.userinterfacejueces.autenticacionJuecesFutcol.SELECCION_SEDE;
 import static co.com.AutoFacebook.userinterface.userinterfacesedes.autenticacionSedesFutcol.BTN_TORNEOS;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class AutenticarseEncuentrosFutcol implements Task {
 
@@ -44,22 +48,17 @@ public class AutenticarseEncuentrosFutcol implements Task {
         actor.attemptsTo(
                 MoveMouse.to(BTN_TORNEOS),
                 Click.on(OPCION_ENCUENTROS),
-                Click.on(SELECCION_TIPO),
                 SelectFromOptions.byVisibleText("Relampago").from(SELECCION_TIPO),
-                Click.on(SELECCION_SEDEENCUENTROS),
                 SelectFromOptions.byVisibleText("SENA - Complejo sur").from(SELECCION_SEDEENCUENTROS),
-                Click.on(SELECCION_MODALIDAD),
                 SelectFromOptions.byVisibleText("Mixto").from(SELECCION_MODALIDAD),
                 Enter.theValue(cesf.getDiaencuentro()).into(CAMPO_DIAENCUENTRO),
                 Enter.theValue(cesf.getHoraencuentro()).into(CAMPO_HORAENCUENTRO),
-                Click.on(SELECCION_EQUIPOLOCAL),
                 SelectFromOptions.byVisibleText("Millonarios FC").from(SELECCION_EQUIPOLOCAL),
-                Click.on(SELECCION_EQUIPOVISITANTE),
                 SelectFromOptions.byVisibleText("Santa Fe").from(SELECCION_EQUIPOVISITANTE),
                 Enter.theValue(cesf.getGoleslocalencuentro()).into(CAMPO_GOLESLOCAL),
                 Enter.theValue(cesf.getGolesvisitanteencuentro()).into(CAMPO_GOLESVISITANTE),
-                Click.on(BTN_CREARENCUENTRO)
+                Click.on(BTN_CREARENCUENTRO),
+                WaitUntil.the(MENSAJEENCUENTROS_CONFIRMAR, WebElementStateMatchers.containsText("Encuentro creado exitosamente")).forNoMoreThan(10).seconds()
         );
-        // theActorInTheSpotlight().remember(SesionVariable.usuario.toString(), cgf.getIdjugadorgoles());
     }
 }

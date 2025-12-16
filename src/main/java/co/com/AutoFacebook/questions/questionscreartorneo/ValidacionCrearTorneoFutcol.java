@@ -11,7 +11,7 @@ import static co.com.AutoFacebook.userinterface.userinterfacecreartorneo.autenti
 public class ValidacionCrearTorneoFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidacionCrearTorneoFutcol.class);
-    private static final String MENSAJECREARTORNEO_ESPERADO = "Gestión de Torneos";
+    private static final String MENSAJECREARTORNEO_ESPERADO = "Torneo creado exitosamente";
 
     public static ValidacionCrearTorneoFutcol validacionCrearTorneoFutcol() {
         return new ValidacionCrearTorneoFutcol();
@@ -23,7 +23,7 @@ public class ValidacionCrearTorneoFutcol implements Question<Boolean> {
             logger.info("Texto encontrado en MENSAJE_ORDEN: " + texto);
             return MENSAJECREARTORNEO_ESPERADO.equalsIgnoreCase(texto);
         } catch (Exception e) {
-            logger.error("No se encontró el Mensaje: " + e.getMessage());
+            logger.error("No se encontró el mensaje de confirmación de torneo: {} " + e.getMessage());
             return false;
         }
     }

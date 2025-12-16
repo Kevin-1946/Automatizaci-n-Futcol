@@ -25,5 +25,5 @@ public class autenticacionRecibodepagoFutcol extends PageObject {
     public static Target BTN_CREARRECIBO = Target.the("Ingrese la direccion de la sede")
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/button");
     public static Target MENSAJERECIBODEPAGO_CONFIRMAR= Target.the("Administrador")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h3");
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div");
 }

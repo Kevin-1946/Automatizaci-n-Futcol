@@ -10,7 +10,7 @@ import static co.com.AutoFacebook.userinterface.userinterfacesedes.autenticacion
 public class ValidacionSedesFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidacionSedesFutcol.class);
-    private static final String MENSAJESEDES_ESPERADO = "Gestión de Sedes";
+    private static final String MENSAJESEDES_ESPERADO = "Sede creada exitosamente";
 
     public static ValidacionSedesFutcol validacionSedesFutcol() {
         return new ValidacionSedesFutcol();

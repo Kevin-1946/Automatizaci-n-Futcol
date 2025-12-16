@@ -10,7 +10,7 @@ import static co.com.AutoFacebook.userinterface.userinterfacejueces.autenticacio
 public class ValidacionJuecesFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidacionJuecesFutcol.class);
-    private static final String MENSAJEJUECES_ESPERADO = "Jueces";
+    private static final String MENSAJEJUECES_ESPERADO = "Juez creado exitosamente";
 
     public static ValidacionJuecesFutcol validacionJuecesFutcol() {
         return new ValidacionJuecesFutcol();

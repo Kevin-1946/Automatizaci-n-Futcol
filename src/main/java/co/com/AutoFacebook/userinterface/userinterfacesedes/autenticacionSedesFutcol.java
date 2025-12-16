@@ -17,5 +17,5 @@ public class autenticacionSedesFutcol extends PageObject {
     public static Target BTN_CREAR = Target.the("Clique en el boton Crear")
             .locatedBy("//*[@id=\"root\"]/div/main/div/div/form/div/button");
     public static Target MENSAJESEDES_CONFIRMAR= Target.the("Gestión de Sedes")
-            .locatedBy("//*[@id=\"root\"]/div/main/div/div/h2");
+            .locatedBy("//*[@id=\"root\"]/div/main/div/div/div[1]");
 }

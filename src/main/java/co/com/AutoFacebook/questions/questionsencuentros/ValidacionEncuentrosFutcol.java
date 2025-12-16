@@ -11,7 +11,7 @@ import static co.com.AutoFacebook.userinterface.userinterfaceencuentros.autentic
 public class ValidacionEncuentrosFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidacionEncuentrosFutcol.class);
-    private static final String MENSAJEENCUENTROS_ESPERADO = "Encuentros";
+    private static final String MENSAJEENCUENTROS_ESPERADO = "Encuentro creado exitosamente";
 
     public static ValidacionEncuentrosFutcol validacionEncuentrosFutcol() {
         return new ValidacionEncuentrosFutcol();
@@ -23,7 +23,7 @@ public class ValidacionEncuentrosFutcol implements Question<Boolean> {
             logger.info("Texto encontrado en MENSAJE_ORDEN: " + texto);
             return MENSAJEENCUENTROS_ESPERADO.equalsIgnoreCase(texto);
         } catch (Exception e) {
-            logger.error("No se encontró el Mensaje: " + e.getMessage());
+            logger.error("No se encontró el mensaje de confirmación de encuentro: {} " + e.getMessage());
             return false;
         }
     }

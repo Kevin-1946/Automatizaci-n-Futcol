@@ -10,7 +10,7 @@ import static co.com.AutoFacebook.userinterface.userinterfacerecibodepago.autent
 public class ValidacionRecibodepagoFutcol implements Question<Boolean> {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidacionRecibodepagoFutcol.class);
-    private static final String MENSAJERECIBODEPAGO_ESPERADO = "Lista de Recibos";
+    private static final String MENSAJERECIBODEPAGO_ESPERADO = "Recibo creado exitosamente";
 
     public static ValidacionRecibodepagoFutcol validacionRecibodepagoFutcol() {return new ValidacionRecibodepagoFutcol();
     }

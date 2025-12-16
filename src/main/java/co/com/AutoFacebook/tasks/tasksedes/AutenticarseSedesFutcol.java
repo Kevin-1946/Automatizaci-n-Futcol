@@ -8,9 +8,13 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.MoveMouse;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+
 import java.util.List;
 import static co.com.AutoFacebook.userinterface.userinterfacesedes.autenticacionSedesFutcol.*;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotVisible;
 
 public class AutenticarseSedesFutcol implements Task {
 
@@ -38,8 +42,9 @@ public class AutenticarseSedesFutcol implements Task {
                 Click.on(OPCION_SEDES),
                 Enter.theValue(cf.getSede()).into(CAMPO_SEDE),
                 Enter.theValue(cf.getDireccion()).into(CAMPO_DIRECCION),
-                Click.on(BTN_CREAR)
+                Click.on(BTN_CREAR),
+                WaitUntil.the(MENSAJESEDES_CONFIRMAR, WebElementStateMatchers.containsText("Sede creada exitosamente")).forNoMoreThan(10).seconds()
         );
-        theActorInTheSpotlight().remember(SesionVariable.usuario.toString(), cf.getDireccion());
+        // theActorInTheSpotlight().remember(SesionVariable.usuario.toString(), cf.getDireccion());
     }
 }

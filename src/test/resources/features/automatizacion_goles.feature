@@ -9,5 +9,5 @@ Característica: quiero registrar los goles de cada jugador
 
     Cuando ingrese la informacion en los campos de jugador y encuentro
       | idjugadorgoles | idencuentrogoles | cantidadgoles |
-      | 4              | 3                | 3             |
+      | 4              | 27               | 3             |
     Entonces se crearan los goles visibles en otro modulos
