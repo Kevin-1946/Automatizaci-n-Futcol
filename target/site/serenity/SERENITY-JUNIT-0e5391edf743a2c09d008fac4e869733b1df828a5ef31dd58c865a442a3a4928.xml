@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="quiero crear una sede" skipped="0" tests="1" time="11.91" timestamp="2025-12-15 08:52:24"><testcase name="crear una sede"><failure message="&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;</failure><system-err>&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;&#13;
+co.com.AutoFacebook.stepsdefinitions.SedesStepDefinitionsFutcol.seCrearaUnaSedeVisibleEnOtroModulos(SedesStepDefinitionsFutcol.java:22)&#13;
+✽.se creara una sede visible en otro modulos(src/test/resources/features/automatizacion_sedes.feature:13)&#13;
+</system-err></testcase></testsuite>

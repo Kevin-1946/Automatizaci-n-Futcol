@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="quiero registrar los goles de cada jugador" skipped="0" tests="1" time="13.36" timestamp="2025-12-01 07:03:34"><testcase name="registrar goles"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="quiero registrar los goles de cada jugador" skipped="0" tests="1" time="12.76" timestamp="2025-12-15 08:51:33"><testcase name="registrar goles"><failure message="&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;</failure><system-err>&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;&#13;
+co.com.AutoFacebook.stepsdefinitions.GolesStepDefinitionsFutcol.seCrearanLosGolesVisiblesEnOtroModulos(GolesStepDefinitionsFutcol.java:23)&#13;
+✽.se crearan los goles visibles en otro modulos(src/test/resources/features/automatizacion_goles.feature:13)&#13;
+</system-err></testcase></testsuite>

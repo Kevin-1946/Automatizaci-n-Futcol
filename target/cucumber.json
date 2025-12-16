@@ -1,0 +1,84 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6896691400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PreparacionEscenario.preparar(Scenario)"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "crear una sede",
+        "description": "",
+        "id": "quiero-crear-una-sede;crear-una-sede",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4515876500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "ingrese la informacion en los campos",
+            "match": {
+              "location": "SedesStepDefinitionsFutcol.ingreseLaInformacionEnLosCampos(CredencialesSedesFutcol\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "sede",
+                  "direccion"
+                ]
+              },
+              {
+                "cells": [
+                  "SENA - Complejo sur",
+                  "Av. Cra. 30 #17-28, Bogotá"
+                ]
+              }
+            ],
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: \r\nExpected: is \u003ctrue\u003e\r\n     but: was \u003cfalse\u003e\r\n\tat net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)\r\n\tat net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)\r\n\tat net.serenitybdd.screenplay.Actor.should(Actor.java:316)\r\n\tat co.com.AutoFacebook.stepsdefinitions.SedesStepDefinitionsFutcol.seCrearaUnaSedeVisibleEnOtroModulos(SedesStepDefinitionsFutcol.java:22)\r\n\tat ✽.se creara una sede visible en otro modulos(src/test/resources/features/automatizacion_sedes.feature:13)\r\n",
+              "duration": 452231800,
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "se creara una sede visible en otro modulos",
+            "match": {
+              "location": "SedesStepDefinitionsFutcol.seCrearaUnaSedeVisibleEnOtroModulos()"
+            },
+            "keyword": "Entonces "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@autenticacion"
+          }
+        ]
+      }
+    ],
+    "name": "quiero crear una sede",
+    "description": "",
+    "id": "quiero-crear-una-sede",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/automatizacion_sedes.feature",
+    "tags": []
+  }
+]    "description": "",
+    "id": "quiero-crear-un-jugador",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/automatizacion_jugadores.feature",
+    "tags": []
+  }
+]

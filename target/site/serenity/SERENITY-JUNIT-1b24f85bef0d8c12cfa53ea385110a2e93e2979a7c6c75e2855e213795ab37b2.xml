@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="quiero crear un jugador" skipped="0" tests="1" time="15.18" timestamp="2025-12-15 08:52:05"><testcase name="crear un jugador"><failure message="&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;</failure><system-err>&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;&#13;
+co.com.AutoFacebook.stepsdefinitions.JugadoresStepDefinitionsFutcol.seCrearaUnJugador(JugadoresStepDefinitionsFutcol.java:22)&#13;
+✽.se creara un jugador(src/test/resources/features/automatizacion_jugadores.feature:13)&#13;
+</system-err></testcase></testsuite>
